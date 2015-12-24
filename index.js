@@ -9,7 +9,16 @@
  */
 class Colcon {
 
-	constructor() {}
+	constructor(colorCode) {
+		var self = this;
+
+		var result = {
+			rgb: self.toRgb(colorCode),
+			hex: self.toHex(colorCode);
+		};
+
+		return result;
+	}
 
 
 	/**
