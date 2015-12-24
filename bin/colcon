@@ -1,0 +1,19 @@
+#! /usr/bin/env node
+var program = require('commander'),
+	colcon = require('../lib/colcon'),
+	version = require('../package.json').version;
+
+program
+	.version(version)
+	.usage('[options]')
+	.option('-c, --color [value]', 'A color code like rgb or hex')
+	.parse(process.argv);
+
+if (typeof program.color == 'string') {
+	var color = colcon.convert(program.color);
+	console.log(color);
+} else if (typeof program.color == 'boolean') {
+	console.log('ERROR: Please do not use a # in hex color codes');
+} else {
+	console.error('ERROR: -c or --color is required.');
+}
