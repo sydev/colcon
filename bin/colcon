@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+
 var program = require('commander'),
 	colcon = require('../lib/colcon'),
 	version = require('../package.json').version;
@@ -10,17 +11,21 @@ program
 	.parse(process.argv);
 
 if (typeof program.color == 'string') {
-	var color = colcon.convert(program.color);
-
-	// Empty console.log() for empty row
-	console.log();
-	for (var p in color) {
-		console.log(p + ': ' + color[p]);
-	}
-	console.log();
+	colcon.convert(program.color, function(error, result) {
+		if (error) {
+			console.log('ERROR: ' + error);
+		} else {
+			// Empty console.log() for empty row
+			console.log();
+			for (var p in result) {
+				console.log(p + ': ' + result[p]);
+			}
+			console.log();
+		}
+	});
 
 } else if (typeof program.color == 'boolean') {
-	console.log('ERROR: Please do not use a # in hex color codes');
+	console.log('ERROR: Please do not use a # in hex color codes.');
 } else {
 	console.error('ERROR: -c or --color is required.');
 }
