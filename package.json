@@ -1,6 +1,6 @@
 {
 	"name": "colcon",
-	"version": "0.3",
+	"version": "0.3.0",
 	"description": "A simple to use color code converter",
 	"keywords": [
 		"color",
