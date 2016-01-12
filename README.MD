@@ -80,7 +80,14 @@ Programmatically API:
 Release Notes
 -------------
 
+-	0.3.1
+	-	More helpful comments
+	-	More helpful command line output
+	-	Some conversion improvements
+	-	Some bugfixes
+-	0.3.0
+	-	Some bugfixes
 -	0.2.0
 	-	Global usage is now available
-	-	some bugfixes
+	-	Some bugfixes
 -	0.1.0 Initial Release
