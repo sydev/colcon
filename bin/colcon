@@ -24,7 +24,7 @@ if (typeof program.color == 'string') {
 		}
 	});
 
-} else if (typeof program.color == 'boolean' && program.color) {
+} else if (program.color === true) {
 	console.log('Please add a color code to the -c parameter. If you had added a color code with leading #, please remove it. (The shell will interpret it as a comment)');
 } else {
 	console.error('ERROR: -c or --color is required.');
