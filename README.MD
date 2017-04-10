@@ -1,18 +1,15 @@
-colcon
-======
+# colcon
 
 A simple to use color code converter. Supports RGB and HEX color formats.
 
-Table of Contents
------------------
+## Table of Contents
 
 -	[Installation](#installation)
 -	[Usage](#usage)
 -	[API](#api)
 -	[Release Notes](#release-notes)
 
-Installation
-------------
+## Installation
 
 For programmatically usage install colcon locally:
 
@@ -26,8 +23,7 @@ For global usage install it globally:
 npm install colcon -g
 ```
 
-Usage
------
+## Usage
 
 To use colcon programmatically, add something like this in your code:
 
@@ -50,8 +46,7 @@ For command line conversion hit:
 colcon -c [color code]
 ```
 
-API
----
+## API
 
 Command line API:
 
